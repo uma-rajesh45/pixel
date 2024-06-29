@@ -19,7 +19,7 @@ const SearchHeader = () => {
             priority
           />
         </Link>
-        <div className="flex-1">
+        <div className="flex-1 pt-2">
           <SearchBox />
         </div>
         <div className="hidden md:inline-flex space-x-3">
