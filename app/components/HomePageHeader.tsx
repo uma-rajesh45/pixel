@@ -7,7 +7,7 @@ const HomePageHeader = () => {
     <header className="flex justify-end p-5">
       <div className="flex gap-5 items-center">
         <Link href="https://mail.google.com/mail" className="hover:underline">
-        Gmail
+        Mail
         </Link>
         <Link href="https://image.google.com"  className="hover:underline">
         Images
