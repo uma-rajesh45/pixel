@@ -12,7 +12,7 @@ const SearchHeaderOptions = () => {
         router.push(`/search/${tab==="Images"?'image':'web'}?searchTerm=${searchTerm}`)
     }
   return (
-    <div className='flex justify-center lg:justify-start lg:pl-52 text-gray-700 text-md w-full select-none gap-4 items-center'>
+    <div className='flex sm:pl-[14%] justify-start max-sm:!pl-3 lg:justify-start lg:pl-52 text-gray-700 text-md w-full select-none gap-4 items-center'>
         <div onClick={()=>selectTab("All")} className={`flex gap-1 items-center active:text-blue-500 border-b-4 border-transparent cursor-pointer ${path==="/search/web"&&'!text-blue-600 !border-blue-600'}`}>
             <AiOutlineSearch/>
             <p>All</p>

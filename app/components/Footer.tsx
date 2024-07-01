@@ -15,7 +15,7 @@ const Footer = () => {
 
     ]
   return (
-    <footer className='w-full text-sm text-gray-500 absolute bottom-0 bg-[#f2f2f2]'>
+    <footer className='w-full text-sm text-gray-500 relative bottom-0 bg-[#f2f2f2]'>
         <div className='px-4'>
             <CountryLookUp/>
         </div>
