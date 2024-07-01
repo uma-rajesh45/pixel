@@ -5,6 +5,7 @@ import Logo from "@/public/Logo.png";
 import SearchBox from "./SearchBox";
 import { RiSettings3Line } from "react-icons/ri";
 import { TbGridDots } from "react-icons/tb";
+import SearchHeaderOptions from "./SearchHeaderOptions";
 
 const SearchHeader = () => {
   return (
@@ -29,6 +30,7 @@ const SearchHeader = () => {
         <button className="bg-blue-500 text-white px-6 py-2 rounded-md hover:brightness-105 hover:shadow-md transition-shadow ml-2">Sign In</button>
 
       </div>
+      <SearchHeaderOptions/>
     </header>
   );
 };
