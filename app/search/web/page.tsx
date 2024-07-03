@@ -1,7 +1,6 @@
 import WebSearch from '@/app/components/WebSearch';
-import delay from 'delay';
 import Link from 'next/link';
-import React from 'react'
+import React, { Suspense } from 'react'
 const page =async ({searchParams}:{searchParams:{searchTerm:string,start:string}}) => {
   const start = searchParams.start || "1"
   const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.G_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&start=${start}`);
@@ -20,10 +19,13 @@ const page =async ({searchParams}:{searchParams:{searchTerm:string,start:string}
       </div>
     )
   }
-  await delay(3000);
   return (
     <div>
-      {results&&<WebSearch results={data}/>}
+      {results&&
+      <Suspense>
+      <WebSearch results={data}/>
+      </Suspense>
+      }
     </div>
     
   )
