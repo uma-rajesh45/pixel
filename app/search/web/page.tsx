@@ -1,8 +1,9 @@
 import WebSearch from '@/app/components/WebSearch';
 import Link from 'next/link';
 import React from 'react'
-const page =async ({searchParams}:{searchParams:{searchTerm:string}}) => {
-  const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.G_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}`);
+const page =async ({searchParams}:{searchParams:{searchTerm:string,start:string}}) => {
+  const start = searchParams.start || "1"
+  const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.G_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&start=${start}`);
   if(!response.ok){
     throw new Error("something went wrong ! please try again")
   }

@@ -7,7 +7,7 @@ const page = () => {
   return (
     <>
       <HomePageHeader />
-      <div className="flex flex-col items-center mt-24 ">
+      <div className="flex flex-col items-center mt-24 min-h-screen">
         <Image
           src={Logo}
           alt="Pixel search engine Logo"

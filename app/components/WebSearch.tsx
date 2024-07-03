@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import parse from 'html-react-parser';
+import Pagination from "./Pagination";
 type Results = {
   results: {
     searchInformation: {
@@ -37,6 +38,7 @@ const WebSearch = ({ results }: Results) => {
           <p className="text-gray-600">{parse(result.htmlSnippet)}</p>
         </div>
       ))}
+      <Pagination/>
     </div>
   );
 };
