@@ -1,4 +1,5 @@
 import ImageSearch from '@/app/components/ImageSearch';
+import delay from 'delay';
 import Link from 'next/link';
 import React from 'react'
 const page =async ({searchParams}:{searchParams:{searchTerm:string,start:string}}) => {
@@ -19,6 +20,7 @@ const page =async ({searchParams}:{searchParams:{searchTerm:string,start:string}
       </div>
     )
   }
+  await delay(3000)
   return (
     <div>
       {results&&<ImageSearch results={data}/>}

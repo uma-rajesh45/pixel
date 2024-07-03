@@ -13,7 +13,7 @@ type Results = {
 };
 const ImageSearch = ({ results }: Results) => {
   return (
-    <div className="pb-24 mt-3">
+    <div className="pb-24 sm:pb-40 mt-3">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {results.items.map((result) => (
           <div key={result.link} className="w-full h-auto">
