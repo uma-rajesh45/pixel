@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import React, { Suspense } from "react";
 const WebSearch = dynamic(() => import("@/app/components/WebSearch"));
 const page = async ({
   searchParams,
@@ -34,9 +33,7 @@ const page = async ({
   return (
     <div>
       {results && (
-        <Suspense>
           <WebSearch results={data} />
-        </Suspense>
       )}
     </div>
   );

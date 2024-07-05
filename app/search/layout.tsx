@@ -1,12 +1,17 @@
-import React from 'react'
-import SearchHeader from '../components/SearchHeader'
+import React, { Suspense } from "react";
+import SearchHeader from "../components/SearchHeader";
 
-const layout = ({children}:{children:React.ReactNode}) => {
+const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-        <header><SearchHeader/></header>
-        {children}</div>
-  )
-}
+      <Suspense>
+        <header>
+          <SearchHeader />
+        </header>
+      </Suspense>
+      {children}
+    </div>
+  );
+};
 
-export default layout
+export default layout;

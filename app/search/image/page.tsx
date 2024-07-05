@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Suspense } from "react";
 const ImageSearch = dynamic(() => import("@/app/components/ImageSearch"));
 
 const page = async ({
@@ -35,9 +34,7 @@ const page = async ({
   return (
     <div>
       {results && (
-        <Suspense>
           <ImageSearch results={data} />
-        </Suspense>
       )}
     </div>
   );
