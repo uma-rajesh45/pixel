@@ -41,7 +41,7 @@ const HomeSearch = () => {
           onClick={handleSubmit}
           disabled={loading}
         >
-          Google Search
+          Pixel Search
         </button>
         <button className="text-gray-800 bg-[#f8f9fa] rounded-md text-sm hover:ring-gray-200 focus:outline-none active:ring-gray-300 hover:shadow-md transition-shadow w-36 h-10
         disabled:opacity-80 disabled:shadow-sm disabled:cursor-not-allowed"
